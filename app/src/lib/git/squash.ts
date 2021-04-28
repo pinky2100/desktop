@@ -27,7 +27,7 @@ export async function squash(
   ]
 
   let todoOutput = ''
-  commits.forEach(c => {
+  commits.reverse().forEach(c => {
     if (toSquash.map(sq => sq.sha).includes(c.sha)) {
       return
     }
